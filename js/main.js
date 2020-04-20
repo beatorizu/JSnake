@@ -32,10 +32,10 @@ function createFood() {
 document.addEventListener('keydown', update);
 
 function update(event) {
-    if ((event.keyCode == 65 || event.keyCode == 37) && direction != 'right') direction = 'left' // 65 left
-    if ((event.keyCode == 68 || event.keyCode == 39) && direction != 'left') direction = 'right' // 68 right
-    if ((event.keyCode == 83 || event.keyCode == 40) && direction != 'up') direction = 'down' // 83 down
-    if ((event.keyCode == 87 || event.keyCode == 38) && direction != 'down') direction = 'up' // 87 up
+    if (KEY.LEFT.includes(event.keyCode) && direction != 'right') direction = 'left'
+    if (KEY.RIGHT.includes(event.keyCode) && direction != 'left') direction = 'right'
+    if (KEY.DOWN.includes(event.keyCode) && direction != 'up') direction = 'down'
+    if (KEY.UP.includes(event.keyCode) && direction != 'down') direction = 'up'
 }
 
 function gameLoop() {
